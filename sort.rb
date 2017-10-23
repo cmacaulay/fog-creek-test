@@ -9,10 +9,10 @@ def count_chars(text, hash)
   hash
 end
 
-def sort_letters(hash, array)
+def sort_letters(hash, string)
   ordered = hash.values.sort! { |x, y| y <=> x }
-  ordered.each { |v| array << hash.key(v) }
-  p array.join
+  ordered.each { |v| string << hash.key(v) }
+  p string
 end
 
 string = "abcdefghijklmnopqrstuvwxyz_"
@@ -20,4 +20,4 @@ text   = "cwrxwzbgickpjbp_svnudntddwdqbfgzyiqpuxddmpvyfquosmicfzkjekxzchngpqaksa
 
 hash    = create_alphabet(string)
 updated = count_chars(text, hash)
-sort_letters(hash, Array.new)
+sort_letters(hash, String.new)
